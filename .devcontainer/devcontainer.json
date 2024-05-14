@@ -1,0 +1,19 @@
+{
+    "name": "Lobe_Chat Development Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
+    "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker:1": {},
+      "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "settings": {
+      "editor.formatOnSave": true,
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+      "ms-azuretools.vscode-docker",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "pythagoratechnologies.gpt-pilot-vs-code"
+    ],
+    "postCreateCommand": "npm install && npm run build"
+  }
